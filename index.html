@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/iDevMore/BuildLPs/Fortnite/1/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Free V-Bucks</title>
+    
+  </head>
+  <body>
+    <div class="onlineUsers" style="display: flex;">
+        <h5 class="online" >Online Users: </h5><p id="online_user" style="margin: 1px 0px 5px 8px ; color: #69bb1e; font-weight: bold; font-size: 18px;"></p> 
+    </div>
+    <h1 class="text-center">SELECT AMOUNT OF V-BUCKS</h1>
+
+    <!-- <div class="row align-items-center container">
+        <div class="col first">
+          One of three columns
+        </div>
+        <div class="col">
+          One of three columns
+        </div>
+        <div class="col">
+          One of three columns
+        </div>
+      </div> -->
+    
+      
+      <div class="container">
+          <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-secondary box first" id="v2500">
+              <img src="./vbucks/v-bucks-lgm.png" alt="">
+              <div class="price text-center" >2500</div>
+              <div class="price text-center">V-BUCKS</div>
+          </button>
+          <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-secondary box first" id="v3500">
+            <img src="./vbucks/v-bucks-lgm.png" alt="">
+            <div class="price text-center" id="3500">3500</div>
+            <div class="price text-center">V-BUCKS</div>
+          </button>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-secondary box first" id="v7500">
+            <img src="./vbucks/v-bucks-lgm.png" alt="">
+            <div class="price text-center">7500</div>
+            <div class="price text-center">V-BUCKS</div>
+          </button>
+          <!-- <div class="box"></div> -->
+
+
+          <!-- first modal -->
+      </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1"  data-bs-backdrop="static" aria-labelledby="exampleModalLabel"  aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered " > 
+            <div class="modal-content" style="background: #6C757D;">
+                
+                <h5 class="modal-title text-center" id="exampleModalLabel" style="font-weight: bold; color: white; margin-top: 20px; font-size: 27px;"></h5>
+                
+
+                <label for="user" class="text-center" style="font-weight: bold; margin: 20px 0px; font-size: 18px; color: white;">Your username</label>
+                
+                <div class="input-group flex-nowrap">
+                    <input  type="text" id="userName" style="color: white; border-radius: 10px;" class="border-bottom" placeholder="Your username" aria-label="Username" aria-describedby="addon-wrapping" required>
+                  </div>
+                  <label class="text-center Platform">Your Platform</label>
+                
+                  <div class="row align-items-center container">
+                    <button id="col btttn" type="button" onclick="check()" class="col btn btn-primary ios" style="margin: 5px 5px;"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <label >Android</label>
+                    </button>
+                    <button id="col " type="button " onclick="check()" class="col btn btn-primary ios" style="margin: 5px 5px;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <label >IOS</label>
+                    </button>
+                    
+                  </div>
+                  <div class="row align-items-center container">
+                    <button id="col" type="button " onclick="check()" class="col btn btn-primary ios" style="margin: 5px 5px;"data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <label >PS4</label>
+                    </button>
+                    <button id="col" type="button " onclick="check()" class="col btn btn-primary" style="margin: 5px 5px;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <label >XBOX</label>
+                    </button>
+                    
+                  </div>
+                  <div class="row align-items-center container">
+                    <button id="col" type="button " onclick="check()" class="col btn btn-primary" style="margin: 5px 5px 40px 5px ;"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <label >Windows</label>
+                    </button>
+                    <button id="col" type="button " onclick="check()" class="col btn btn-primary" style="margin: 5px 5px 40px 5px;"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <label class="device" >Mac OS</label>
+                    </button>
+                
+                  </div>
+                <button type="button" class="btn btn-warning" style="margin-top: 20px;" data-bs-dismiss="modal">close</button>
+                
+            </div>
+            </div>
+        </div>
+        <!-- second modal loading modal -->
+          <div class="modal fade secondModal" id="staticBackdrop" sty data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div id="loading-wrapper"class="allLoading" >
+                    <div id="loading-text" class="loading2">LOADING</div>
+                    <div id="loading-content" class="loading"></div>
+                </div> 
+                <div class="hide" style="display: none; background-color: #6C757D; box-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                  <div class="verficationIcon justify-content-center " style="display: flex; margin-top: 20px; " >
+                  <h3><span class="material-icons md-48 white" style="color: black;">person</span></h3> 
+                  <h4 style="color: black;">Human Verfication</h4>
+                  </div>
+                  <div class="verfication-content" style="margin-top: 10px;">
+                    <p class="text-center">Your V-Bucks is almost ready, you just need to prove that you are not a bot abusing our generator:</p>
+                  </div>
+                  <div class="ads" style="margin-bottom:25px ;">
+                    <div class="row text-center container">
+                      <div id="col" >
+                          <label for="ad">AD</label>
+                      </div>
+                      <div id="col ">
+                          <label>AD</label>
+                      </div>
+                      <div id="col ">
+                        <label>AD</label>
+                      </div>
+                      <div id="col ">
+                        <label>AD</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- third modal human verfication -->
+          <!-- <div class="modal fade" id="humanVerfication" style="background-color: #6C757D;" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-centered modal-lg">
+              <div class="modal-body" style="background-color: #6C757D;">
+                <p>Modal body text goes here.</p>
+              </div>
+            </div>
+          </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+    
+  </body>
+</html>
